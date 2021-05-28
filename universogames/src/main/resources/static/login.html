@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- NORMALIZZA I BROWSER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <!-- LINK AL FOGLIO DI STILE-->
+    <link rel="stylesheet" href="index_style.css">
+    <!-- LINK AL FONT DI GOOGLE-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/UNIVERSO_Games_6.png"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="elencoNotizie.html">Notizie</a></li>
+            <li><a href="elencoRecensioni.html">Recensioni</a></li>
+            <li><a href="elencoGame.html">Videogiochi</a></li>
+            <li><a href="index.html#piattaforme" class="dropbtn">Piattaforme</a></li>
+            <input type="text" placeholder="Cerca...">
+            <li style="float: right"><a href="login.html">Login</a></li>
+        </ul>  
+    </div>
+
+    <div class="box_login">
+        <video autoplay muted loop id="video-back">
+            <source src="video/fumo.mp4" type="video/mp4">
+        </video>
+
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Registrazione</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>o usa la tua email</span>
+                    <input type="text" placeholder="Username" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button>Registrati</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Accedi</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>o usa il tuo account</span>
+                    <input type="text" placeholder="Username" />
+                    <input type="password" placeholder="Password" />
+                    <a href="#">Hai dimenticato la tua password?</a>
+                    <button>Accedi</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <img src="img/astronauta.png" alt="" style="padding-bottom: 5px;">
+                        <h1>Bentornato!</h1>
+                        <p>Per rimanere in contatto con noi, effettua il login con le tue informazioni personali!</p>
+                        <button class="ghost" id="signIn">Accedi</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <img src="img/astronauta.png" alt="" style="padding-bottom: 5px;">
+                        <h1>Benvenuto!</h1>
+                        <p>Inserisci i dati e inizia il tuo viaggio interstellare nel mondo dei videogiochi con noi!</p>
+                        <button class="ghost" id="signUp">Registrati</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- BOX FOUR -->
+        <footer class="footer">
+            <div class="box_four">
+                
+                <div class="col">
+                    <h4 class="normal-text tw">Privacy Policy</h4>
+                    <p><a href="https://www.governo.it/it/privacy-policy">Trattamento dei dati personali</a></p>
+                </div>
+                
+                <div class="col">
+                    <h4 class="normal-text tw">Informativa sui cookie</h4>
+                    <p><a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/3585077">Informativa e consenso</a></p>
+                </div>
+                
+                <div class="col">
+                    <h4 class="normal-text tw">Chi siamo</h4>
+                    <p><a href="chisiamo.html">Il nostro Team</a></p>
+                </div>
+
+                <div class="col">
+                    <h4 class="normal-text tw">Luogo misterioso</h4>
+                    <p><a href="universo.html">Chissà cosa nasconde al suo interno...</a></p>
+                </div>
+                
+                
+            </div>
+            
+        </footer>   
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+    });
+</script>
+
+</body>
+</html>

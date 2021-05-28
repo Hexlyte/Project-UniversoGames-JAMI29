@@ -1,0 +1,322 @@
+/* ! Base Style  */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: rgb(230, 230, 230);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: #000;
+  padding-bottom: 30px;
+}
+
+p {
+  line-height: 28px;
+  color: #666;
+  font-weight: 300;
+}
+
+.big-text {
+  font-size: 70px;
+  font-weight: 900;
+}
+.med-text {
+  font-size: 40px;
+}
+.normal-text {
+  font-size: 20px;
+}
+.small-text {
+  font-size: 12px;
+}
+
+.intro-text {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+} /* Bold è grassetto*/
+
+.button {
+  padding: 18px 28px;
+  background: #316bff;
+  color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+
+/* -------------------------- Header ---------------------------- */
+
+.header {
+  width: 100%;
+  position: fixed; /* rimanse fisso nello schermo anche se scrollo */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* insime al left 50% serve a metterlo in linea con Hero */
+  padding: 5px 15px;
+  display: flex; /* mi allinea orizzontalmentegli elementi dell' header */
+  background-color: rgba(0,0,0,0.9);
+  z-index: 10;
+  height: 75px;
+}
+
+.logo img {
+  height: 65px;
+  padding-right: 10px;
+}
+
+.menu {
+  width: 100%; /* il menu occupa il 100% dello spazio disponibile lasciato nell header*/
+  margin: 0px;
+  padding-top: 6px;
+  padding-left: 0px;
+}
+
+.menu li {
+  display: inline-block;
+} /* mi allinea orizzontalmente gli li */
+
+.menu li a {
+  color: white;
+  padding: 15px;
+  display: block;
+} /* block serve perchè il padding sui link viene applicato in maniera bizzarra */
+
+.menu input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 12px;
+  margin-right: 0px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-left: 15px;
+  line-height: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu a:hover {
+  transform: scale(1.1)
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  color: white;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 0 0  10px 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* -------------------------- Hero ---------------------------- */
+
+.hero {
+  height: 500px;
+  display: flex; /* mi allinea orizzontalmente gli elementi */
+  width: 100%;
+  align-items: center;
+  background-size: cover; /* allarga l'immagine per coprire tutta l'area disponibile */
+  overflow: hidden; /* Ciò che esce da hero nascondimelo */
+  position: relative;
+}
+
+
+.hero:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  background: #000;
+  opacity: 0.5; /* Serve per opacizzare il video */
+}
+
+
+
+.hero__title {
+  width: 50%;
+  margin: 0 auto; /* lo allinea nel mezzo della pagina */
+  padding: 40px;
+  z-index: 1;
+}
+
+.hero__title h1,
+.hero__title p {color: #fff}
+
+.hero__news {
+  width: 50%;
+  padding: 40px;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 10% 0 0 10%;
+
+}
+
+.single_text p, h4 {
+  padding-bottom: 0px;
+
+}
+
+.single_text {
+  padding: 20px;
+}
+
+#video-back {
+position: absolute;
+left: 0;
+min-width: 100%;
+min-height: 100%;
+z-index: 0;
+
+}
+
+.r_img1 {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.r_img2 {
+  background: url('img/Gow.jpeg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.r_img3 {
+  background: url('img/pokemon-spada-scudo.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-body .intro-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  padding-bottom: 0;
+}
+
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+.d-flex {
+  margin-top: 30px;
+}
+
+
+/* PAGINATION */
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+ margin: 7px;
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #010e30;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+
+/* FOOTER */
+
+
+.footer {
+  background: #010e30;
+  padding: 50px 0;
+}
+
+.box_four {
+  display: flex;
+  max-width: 1350px;
+  max-height: 86px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.box_fours .col {
+  width: 100%;
+}
+
+.col p {
+  margin-bottom: 0;
+}
+
+.footer a {
+  color: unset;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------- Helpers ---------------------------- */
+
+.mt-1 {margin-top: 50px;}
+.mt-2 {margin-top: 100px;}
+.mt-3 {margin-top: 150px;}
+
+.tw{color: #fff;}
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}

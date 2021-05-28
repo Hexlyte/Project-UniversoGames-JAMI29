@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lista Notizie</title>
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="js.cookie.js"></script>
+  <script src="elencoNotizie.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+  <!-- NORMALIZZA I BROWSER -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- LINK AL FONT DI GOOGLE -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <!-- Our Css -->
+  <link rel="stylesheet" href="elencoNotizie_style.css">
+  
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">
+        <a href="index.html"><img src="img/UNIVERSO_Games_6.png"></a>
+    </div>
+    <ul class="menu">
+        
+        <li><a href="index.html">Home</a></li>
+        <li><a href="elencoNotizie.html">Notizie</a></li>
+        <li><a href="elencoRecensioni.html">Recensioni</a></li>
+        <li><a href="elencoGame.html">Videogiochi</a></li>
+        <li><a href="index.html#piattaforme" class="dropbtn">Piattaforme</a></li>
+        <input type="text" placeholder="Cerca...">
+        <li style="float: right"><a href="login.html">Login</a></li>
+    </ul>  
+</div>
+
+  <main>
+    
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero__title">
+        <p class="intro-text">Tutte le notizie <br> dell'universo...</p>
+        <h1 class="big-text">Le notizie</h1>
+        
+      </div>
+      <video autoplay muted loop id="video-back">
+        <source src="video/games.mp4" type="video/mp4">
+      </video>
+      
+    </div>
+    
+    
+    <!-- BOOTSTRAP -->
+    
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 elenco">
+         
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="center">
+    <div class="pagination">
+      <a href="#">&laquo;</a>
+      <a href="#" npage="1" class="active linkpg">1</a>
+      <a href="#" npage="2" class="linkpg">2</a>
+      <a href="#" npage="3" class="linkpg">3</a>
+      <a href="#"npage="4" class="linkpg" >4</a>
+      <a href="#" npage="5" class="linkpg">5</a>
+      <a href="#"npage="6" class="linkpg" >6</a>
+      <a href="#">&raquo;</a>
+    </div>
+  </div>
+  
+        <!-- BOX FOUR -->
+        <footer class="footer">
+          <div class="box_four">
+              
+              <div class="col">
+                  <h4 class="normal-text tw">Privacy Policy</h4>
+                  <p><a href="https://www.governo.it/it/privacy-policy">Trattamento dei dati personali</a></p>
+              </div>
+              
+              <div class="col">
+                  <h4 class="normal-text tw">Informativa sui cookie</h4>
+                  <p><a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/3585077">Informativa e consenso</a></p>
+              </div>
+              
+              <div class="col">
+                  <h4 class="normal-text tw">Chi siamo</h4>
+                  <p><a href="chisiamo.html">Il nostro Team</a></p>
+              </div>
+
+              <div class="col">
+                  <h4 class="normal-text tw">Luogo misterioso</h4>
+                  <p><a href="universo.html">Chissà cosa nasconde al suo interno...</a></p>
+              </div>
+              
+              
+          </div>
+          
+      </footer>
+  
+  
+  
+  <script src="./dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+</body>
+</html>

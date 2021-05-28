@@ -1,0 +1,386 @@
+/* ! Base Style  */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: #171a29;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding-bottom: 30px;
+}
+
+p {
+    line-height: 28px;
+    color: #666;
+    font-weight: 300;
+}
+
+.big-text {
+    font-size: 70px;
+    font-weight: 900;
+}
+.med-text {
+    font-size: 40px;
+}
+.normal-text {
+    font-size: 20px;
+}
+.small-text {
+    font-size: 12px;
+}
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+} /* Bold è grassetto*/
+
+.button {
+    padding: 18px 28px;
+    background: #316bff;
+    color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+
+/* -------------------------- Header ---------------------------- */
+
+.header {
+    width: 100%;
+    position: fixed; /* rimanse fisso nello schermo anche se scrollo */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* insime al left 50% serve a metterlo in linea con Hero */
+    padding: 5px 15px;
+    display: flex; /* mi allinea orizzontalmentegli elementi dell' header */
+    background-color: rgba(0,0,0,0.9);
+    z-index: 10;
+    height: 75px;
+}
+
+.logo img {
+    height: 65px;
+    padding-right: 10px;
+}
+
+.menu {
+    width: 100%; /* il menu occupa il 100% dello spazio disponibile lasciato nell header*/
+    padding-top: 10px;
+}
+
+.menu li {
+    display: inline-block;
+} /* mi allinea orizzontalmente gli li */
+.menu li a {
+    color: white;
+    padding: 15px;
+    display: block;
+} /* block serve perchè il padding sui link viene applicato in maniera bizzarra */
+
+.menu input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 0px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+}
+
+
+/* -------------------------- Hero ---------------------------- */
+
+.hero {
+    height: 500px; /* alto il 100% della schermata*/
+    display: flex; /* mi allinea orizzontalmente gli elementi */
+    width: 100%;
+    align-items: center;
+    background-size: cover; /* allarga l'immagine per coprire tutta l'area disponibile */
+    overflow: hidden; /* Ciò che esce da hero nascondimelo */
+    position: relative;
+}
+
+.hero:after {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    background: #000;
+    opacity: 0.5; /* Serve per opacizzare il video */
+}
+
+.hero__title {
+    width: 50%;
+    margin: 0 auto; /* lo allinea nel mezzo della pagina */
+    padding: 40px;
+    z-index: 1;
+    margin-top: -18px;
+}
+
+.hero__title h1,
+.hero__title p {
+    color: #fff
+}
+
+.hero__title .intro-text {
+    margin-bottom: 23px;
+}
+
+#video-back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;  
+}
+
+
+/* -------------------------- Box ---------------------------- */
+
+/* .box {
+    background-color: #f8f9fa;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 2px 2px 10px #000000;
+    min-height: 450px;
+    width: 80%;
+    justify-content: space-around;
+  } */
+
+.grid_two {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+}
+  
+.dot {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.2)), url('img/soldier.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.box_dot {
+    width: 50%;
+    padding: 15%;
+}
+
+.box_title {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.box_text {
+    width: 50%;
+    padding: 10%;
+}
+
+.dot:hover {
+    transform: scale(1.05);
+}
+
+
+/* -------------------------- Footer ---------------------------- */
+
+.footer {
+    background: #010e30;
+    padding: 50px 0;
+}
+
+.box_four {
+    display: flex;
+    max-width: 1350px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+.box_four .col {
+    width: 100%;
+}
+
+.footer a {
+    color: unset;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+.col h4 {
+    padding-bottom: 8px;
+}
+
+
+/* -------------------------- Helpers ---------------------------- */
+
+.mt-1 {
+    margin-top: 50px;
+}
+.mt-2 {
+    margin-top: 100px;
+}
+.mt-3 {
+    margin-top: 150px;
+}
+
+.tw {
+    color: #fff;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.box {
+  background: url("https://i.pinimg.com/originals/94/82/5a/94825ad80fff30c13cccfaf3d2ce4ea8.gif") center center;
+  background-size: auto;
+  width: 100%;
+  padding: 2%;
+  text-align: center;
+}
+
+.singolo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.teambox {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.snip1584 {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+  max-height: 315px;
+  border-radius: 2%;
+}
+.snip1584 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1584:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 100%;
+  content: '';
+  background-color: rgba(51, 51, 51, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.snip1584 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+.snip1584 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.snip1584 h3,
+.snip1584 h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+  padding-bottom: unset;
+}
+.snip1584 h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.snip1584 h5 {
+  font-weight: normal;
+  background-color: #0d0a469f;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  border-radius: 10%;
+}
+.snip1584 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.snip1584:hover:before,
+.snip1584.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip1584:hover h3,
+.snip1584.hover h3,
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.snip1584:hover h3,
+.snip1584.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
